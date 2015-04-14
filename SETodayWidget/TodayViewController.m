@@ -10,7 +10,7 @@
 #import <NotificationCenter/NotificationCenter.h>
 
 @interface TodayViewController () <NCWidgetProviding>
-
+@property UIBackgroundTaskIdentifier taskIdentifier;
 @end
 
 @implementation TodayViewController
@@ -23,12 +23,23 @@
         id sharedApp = [clazz performSelector:@selector(sharedApplication)];
         NSLog(@"sharedapp: %@",sharedApp);
         
-        UIBackgroundTaskIdentifier task = [(UIApplication*)sharedApp beginBackgroundTaskWithExpirationHandler:^{
-            NSLog(@"Task expired");
+        self.taskIdentifier = [(UIApplication*)sharedApp beginBackgroundTaskWithExpirationHandler:^{
+            [self endBackgroundTask];
         }];
-        NSLog(@"task: %@",@(task));
-        [(UIApplication*)sharedApp endBackgroundTask:task];
+        NSLog(@"task: %@",@(self.taskIdentifier));
+        
+        [self endBackgroundTask];
     }
+}
+
+-(void)endBackgroundTask
+{
+    NSLog(@"Ending");
+    Class clazz = NSClassFromString(@"UIApplication");
+    id sharedApp = [clazz performSelector:@selector(sharedApplication)];
+    [(UIApplication*)sharedApp endBackgroundTask: self.taskIdentifier];
+    self.taskIdentifier = UIBackgroundTaskInvalid;
+    NSLog(@"taskIdPostEnd:%@",@(self.taskIdentifier));
 }
 
 - (void)didReceiveMemoryWarning {

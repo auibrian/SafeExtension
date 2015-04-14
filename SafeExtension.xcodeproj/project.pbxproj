@@ -14,6 +14,10 @@
 		8656AE461ADD64BE0050648C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8656AE451ADD64BE0050648C /* Images.xcassets */; };
 		8656AE491ADD64BE0050648C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8656AE471ADD64BE0050648C /* LaunchScreen.xib */; };
 		8656AE551ADD64BE0050648C /* SafeExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8656AE541ADD64BE0050648C /* SafeExtensionTests.m */; };
+		8656AE651ADD64D60050648C /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8656AE641ADD64D60050648C /* NotificationCenter.framework */; };
+		8656AE6B1ADD64D60050648C /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8656AE6A1ADD64D60050648C /* TodayViewController.m */; };
+		8656AE6D1ADD64D60050648C /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8656AE6C1ADD64D60050648C /* MainInterface.storyboard */; };
+		8656AE701ADD64D60050648C /* SETodayWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8656AE621ADD64D60050648C /* SETodayWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,7 +28,28 @@
 			remoteGlobalIDString = 8656AE341ADD64BE0050648C;
 			remoteInfo = SafeExtension;
 		};
+		8656AE6E1ADD64D60050648C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8656AE2D1ADD64BE0050648C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8656AE611ADD64D60050648C;
+			remoteInfo = SETodayWidget;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8656AE741ADD64D60050648C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8656AE701ADD64D60050648C /* SETodayWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8656AE351ADD64BE0050648C /* SafeExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafeExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +65,12 @@
 		8656AE4E1ADD64BE0050648C /* SafeExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SafeExtensionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8656AE531ADD64BE0050648C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8656AE541ADD64BE0050648C /* SafeExtensionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SafeExtensionTests.m; sourceTree = "<group>"; };
+		8656AE621ADD64D60050648C /* SETodayWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SETodayWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		8656AE641ADD64D60050648C /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		8656AE681ADD64D60050648C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8656AE691ADD64D60050648C /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		8656AE6A1ADD64D60050648C /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		8656AE6C1ADD64D60050648C /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +88,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8656AE5F1ADD64D60050648C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8656AE651ADD64D60050648C /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -65,6 +104,8 @@
 			children = (
 				8656AE371ADD64BE0050648C /* SafeExtension */,
 				8656AE511ADD64BE0050648C /* SafeExtensionTests */,
+				8656AE661ADD64D60050648C /* SETodayWidget */,
+				8656AE631ADD64D60050648C /* Frameworks */,
 				8656AE361ADD64BE0050648C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,6 +115,7 @@
 			children = (
 				8656AE351ADD64BE0050648C /* SafeExtension.app */,
 				8656AE4E1ADD64BE0050648C /* SafeExtensionTests.xctest */,
+				8656AE621ADD64D60050648C /* SETodayWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,6 +161,33 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8656AE631ADD64D60050648C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8656AE641ADD64D60050648C /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8656AE661ADD64D60050648C /* SETodayWidget */ = {
+			isa = PBXGroup;
+			children = (
+				8656AE691ADD64D60050648C /* TodayViewController.h */,
+				8656AE6A1ADD64D60050648C /* TodayViewController.m */,
+				8656AE6C1ADD64D60050648C /* MainInterface.storyboard */,
+				8656AE671ADD64D60050648C /* Supporting Files */,
+			);
+			path = SETodayWidget;
+			sourceTree = "<group>";
+		};
+		8656AE671ADD64D60050648C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8656AE681ADD64D60050648C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,10 +198,12 @@
 				8656AE311ADD64BE0050648C /* Sources */,
 				8656AE321ADD64BE0050648C /* Frameworks */,
 				8656AE331ADD64BE0050648C /* Resources */,
+				8656AE741ADD64D60050648C /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8656AE6F1ADD64D60050648C /* PBXTargetDependency */,
 			);
 			name = SafeExtension;
 			productName = SafeExtension;
@@ -157,6 +228,23 @@
 			productReference = 8656AE4E1ADD64BE0050648C /* SafeExtensionTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		8656AE611ADD64D60050648C /* SETodayWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8656AE711ADD64D60050648C /* Build configuration list for PBXNativeTarget "SETodayWidget" */;
+			buildPhases = (
+				8656AE5E1ADD64D60050648C /* Sources */,
+				8656AE5F1ADD64D60050648C /* Frameworks */,
+				8656AE601ADD64D60050648C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SETodayWidget;
+			productName = SETodayWidget;
+			productReference = 8656AE621ADD64D60050648C /* SETodayWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -172,6 +260,9 @@
 					8656AE4D1ADD64BE0050648C = {
 						CreatedOnToolsVersion = 6.3;
 						TestTargetID = 8656AE341ADD64BE0050648C;
+					};
+					8656AE611ADD64D60050648C = {
+						CreatedOnToolsVersion = 6.3;
 					};
 				};
 			};
@@ -190,6 +281,7 @@
 			targets = (
 				8656AE341ADD64BE0050648C /* SafeExtension */,
 				8656AE4D1ADD64BE0050648C /* SafeExtensionTests */,
+				8656AE611ADD64D60050648C /* SETodayWidget */,
 			);
 		};
 /* End PBXProject section */
@@ -209,6 +301,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8656AE601ADD64D60050648C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8656AE6D1ADD64D60050648C /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +333,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8656AE5E1ADD64D60050648C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8656AE6B1ADD64D60050648C /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -240,6 +348,11 @@
 			isa = PBXTargetDependency;
 			target = 8656AE341ADD64BE0050648C /* SafeExtension */;
 			targetProxy = 8656AE4F1ADD64BE0050648C /* PBXContainerItemProxy */;
+		};
+		8656AE6F1ADD64D60050648C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8656AE611ADD64D60050648C /* SETodayWidget */;
+			targetProxy = 8656AE6E1ADD64D60050648C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -397,6 +510,30 @@
 			};
 			name = Release;
 		};
+		8656AE721ADD64D60050648C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SETodayWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		8656AE731ADD64D60050648C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SETodayWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -422,6 +559,14 @@
 			buildConfigurations = (
 				8656AE5C1ADD64BE0050648C /* Debug */,
 				8656AE5D1ADD64BE0050648C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8656AE711ADD64D60050648C /* Build configuration list for PBXNativeTarget "SETodayWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8656AE721ADD64D60050648C /* Debug */,
+				8656AE731ADD64D60050648C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
